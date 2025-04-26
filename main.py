@@ -46,7 +46,7 @@ class User:
         self.username = username
         self.playlists = {}
 
-    def create_playlist(self, playlist_name: str) -> None:
+    def create_playlist(self, playlist_name: str) -> Playlist:
         if playlist_name not in self.playlists:
             self.playlists[playlist_name] = Playlist(playlist_name)
             print(f"Użytkownik '{self.username}' utworzył playlistę '{playlist_name}'.")
